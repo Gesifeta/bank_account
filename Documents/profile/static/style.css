@@ -1,0 +1,347 @@
+/* ===========================
+   DESIGN SYSTEM - Portfolio Website
+   =========================== */
+
+/* 1. CSS Variables - Brand Colors */
+:root {
+  /* Primary Brand Colors */
+  --color-primary: #1A73E8;
+  --color-primary-dark: #1669C1;
+  --color-secondary: #F9A826;
+
+  /* Neutral Colors */
+  --color-neutral-light: #F5F7FA;
+  --color-neutral-dark: #202124;
+  --color-neutral-gray: #5F6368;
+
+  /* Status Colors */
+  --color-success: #34A853;
+  --color-error: #EA4335;
+
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-code: 'Fira Code', monospace;
+
+  /* Font Sizes */
+  --fs-h1: 2rem;     /* 32px */
+  --fs-h2: 1.5rem;   /* 24px */
+  --fs-h3: 1.25rem;  /* 20px */
+  --fs-body: 1rem;   /* 16px */
+  --fs-small: 0.875rem; /* 14px */
+
+  /* Spacing - 4px scale */
+  --space-xs: 4px;
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* Border Radius */
+  --radius-small: 6px;
+  --radius-medium: 8px;
+  --radius-large: 12px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  /* Transition */
+  --transition: all 0.3s ease;
+}
+
+/* 2. Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  color: var(--color-neutral-dark);
+  background-color: var(--color-neutral-light);
+  line-height: 1.6;
+}
+
+/* 3. Typography Styles */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+p {
+  color: var(--color-neutral-gray);
+}
+
+code {
+  font-family: var(--font-code);
+  background: #eee;
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--radius-small);
+}
+
+/* 4. Buttons */
+.btn {
+  display: inline-block;
+  padding: var(--space-s) var(--space-l);
+  border-radius: var(--radius-medium);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* 5. Cards */
+.card {
+  background: white;
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-content {
+  padding: var(--space-m);
+}
+
+/* 6. Form Elements */
+input, textarea {
+  width: 100%;
+  padding: var(--space-s);
+  border: 1px solid #ccc;
+  border-radius: var(--radius-small);
+  font-family: var(--font-body);
+  transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 4px rgba(26, 115, 232, 0.3);
+}
+
+/* 7. Utility Classes */
+.text-center { text-align: center; }
+.mt-m { margin-top: var(--space-m); }
+.mb-m { margin-bottom: var(--space-m); }
+.mt-xl { margin-top: var(--space-xl); }
+.mb-xl { margin-bottom: var(--space-xl); }
+
+/* Container Utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-m);
+}
+
+/* Navbar */
+.navbar {
+  background: white;
+  padding: var(--space-m) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.logo span {
+  color: var(--color-secondary);
+}
+
+nav a {
+  margin-left: var(--space-m);
+  text-decoration: none;
+  color: var(--color-neutral-dark);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+nav a:hover {
+  color: var(--color-primary);
+}
+
+/* Hero Section */
+.hero {
+  padding: var(--space-xxl) 0;
+  background: var(--color-neutral-light);
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: var(--fs-h1);
+  margin-bottom: var(--space-m);
+}
+
+.hero-text p {
+  max-width: 500px;
+  margin-bottom: var(--space-l);
+}
+
+.hero-buttons a {
+  margin-right: var(--space-s);
+}
+
+.hero-illustration {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+
+.hero-illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animation for Wave Emoji */
+.wave {
+  display: inline-block;
+  animation: wave 2s infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(14deg); }
+  40% { transform: rotate(-8deg); }
+  60% { transform: rotate(14deg); }
+  80% { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text p {
+    margin: 0 auto var(--space-l);
+  }
+}
+.section {
+  padding: var(--space-xxl) 0;
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-l);
+}
+
+.alt-bg {
+  background: var(--color-neutral-light);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-xl);
+}
+
+.skills-grid h3 {
+  color: var(--color-primary);
+}
+
+.skills-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-grid li {
+  padding: var(--space-xs) 0;
+  color: var(--color-neutral-gray);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+.timeline-item h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+}
+
+.footer {
+  background: var(--color-primary);
+  color: white;
+  text-align: center;
+  padding: var(--space-xl) 0;
+}
+
+.footer a {
+  color: white;
+  margin: 0 var(--space-s);
+  text-decoration: none;
+  font-weight: 500;
+}
+.footer a:hover {
+  text-decoration: underline;
+}

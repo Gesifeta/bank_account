@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Gemechu Adam</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-blue: #2563EB;
+      --charcoal-black: #0F172A;
+      --cloud-gray: #CBD5E1;
+      --emerald-green: #10B981;
+      --white: #FFFFFF;
+      --slate-blue-tint: #1E293B;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--white);
+      color: var(--charcoal-black);
+      line-height: 1.6;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--charcoal-black), var(--primary-blue));
+      color: var(--white);
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .hero .cta {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .hero .cta:hover {
+      background-color: var(--emerald-green);
+      box-shadow: 0 0 15px var(--emerald-green);
+    }
+
+    /* About Me Section */
+    .about {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .about h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .about strong {
+      font-family: 'Fira Code', monospace;
+      background-color: var(--cloud-gray);
+      padding: 0.1rem 0.3rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>From concept to cloud — I build web apps that work beautifully and scale effortlessly.</h1>
+    <p>Full Stack Developer | AWS Certified | JavaScript, React, Next.js, Python, Django, Flask, PostgreSQL</p>
+    <a href="#about" class="cta">Learn More</a>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Hi, I’m <strong>Gemechu Adam</strong> - a Full Stack Developer & AWS Certified Cloud Practitioner.</p>
+    <p>I build <strong>scalable</strong>, <strong>secure</strong>, and <strong>user-focused</strong> web applications that merge powerful backend architecture with sleek, intuitive front-end design.</p>
+    <p>With expertise in <strong>JavaScript</strong>, <strong>React</strong>, <strong>Next.js</strong>, <strong>Python</strong>, <strong>Django</strong>, <strong>Flask</strong>, <strong>PostgreSQL</strong>, and <strong>cloud deployment on AWS</strong>, I bring ideas to life — from <strong>concept</strong> to <strong>fully-deployed product</strong>.</p>
+    <p>Whether it’s crafting responsive interfaces, designing robust APIs, developing cloud-powered backends, or optimizing infrastructure, I thrive on solving problems and delivering <strong>custom-built solutions</strong> that work beautifully and scale effortlessly.</p>
+  </section>
+
+</body>
+</html>
